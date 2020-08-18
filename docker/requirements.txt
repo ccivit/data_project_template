@@ -1,0 +1,5 @@
+numpy
+scikit
+keras
+tensorflow-gpu
+matplotlib
