@@ -5,5 +5,9 @@ RUN apt-get update && apt-get install -y \
 	vim \
 	bzip2 \ 
 	nano
-  
-  WORKDIR /data_project
+
+WORKDIR /data_project
+
+RUN pip install requirements.txt
+
+ENTRYPOINT ["bin/bash"]
