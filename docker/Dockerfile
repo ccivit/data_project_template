@@ -1,5 +1,4 @@
 FROM nvidia/cuda:9.0-cudnn7-runtime-ubuntu16.04
-
 RUN apt-get update && \
         apt-get install -y software-properties-common && \
         add-apt-repository ppa:deadsnakes/ppa && \
@@ -9,9 +8,8 @@ RUN apt-get update && \
         # update pip
 RUN python3.6 -m pip install pip --upgrade && \
     python3.6 -m pip install matplotlib pillow
-
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
 
-WORKDIR /data_project
+WORKDIR /my_project
 
 ENTRYPOINT ["/bin/bash"]
